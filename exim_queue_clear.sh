@@ -19,7 +19,6 @@ SHELL=/bin/sh PATH=/bin:/sbin:/usr/bin:/usr/sbin
 nw=$(date +%m-%d-%Y%t%T%p)
 
 #ouput current queue message to file i.e. before executing mail clear command
-
 echo "Current Exim Queue On :" >> /root/exim_queue_clear.log
 
 echo "$nw" >> /root/exim_queue_clear.log
@@ -35,6 +34,5 @@ echo 'Queue cleared..!' >> /root/exim_queue_clear.log
 echo 'Current Exim Queue :' >> /root/exim_queue_clear.log
 
 #after clearing check queue count
-
 exim -bpc >> /root/exim_queue_clear.log
 echo '--------------------------------------------------' >> /root/exim_queue_clear.log
